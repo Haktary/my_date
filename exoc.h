@@ -1,6 +1,5 @@
 enum month{ Jan, Feb, Mar, Apr, May, Jun, Jul, Aug, Sep, Oct, Nov, Dec }; 
-// on partira du postula que il y'a 360 jour par ans et que les mois ne dure que 30 jours 
-//si ces trop facile pour vous faite la même chose avec le calendrier maya 
+// on partira du postula que il y'a 360 jour par ans et que les mois ne dure que 30 jours s
 enum day {sunday, monday, tuesday, wednesday, thursday, friday, saturday};
 typedef struct myDate{
 	int years;
@@ -16,7 +15,14 @@ myDate * parserCsvDate(char * fileDate); // parse csv rencoie tab de myDate[2]
 void datePrint(); // print myDate
 
 
-/* le but est de crée un exo my_date dans lequel on manipule une structure et des enume
+/* 
+	le but est de crée un exo my_date dans lequel on manipule struct, enum, et fichier. (utilisation de malloc et sizeof).  
+	la fonction add adition 2 date 
+	la fonction soustraction soustrait 2 date 
+	la fonction readFileDate open un file csv pour récupérer les date (seulement 2)
+	la fonction parserCsv renvoir un tab de myDate[2]
+	la fonction datePrint() print les date sous le format years month day (fonction fournisable)
+
 
 
 */

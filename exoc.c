@@ -25,7 +25,7 @@ struct myDate * additionDate(struct myDate *firstdate, struct myDate *seconddate
 	} else {
 		newDate->theDay = newDay;
 	}
-	return &newDate;
+	return newDate;
 }
 struct myDate * soustractionDate(struct myDate *firstdate, struct myDate *seconddate) {
 
@@ -46,7 +46,7 @@ struct myDate * soustractionDate(struct myDate *firstdate, struct myDate *second
 	} else {
 		newDate->theDay = newDay;
 	}
-	return &newDate;
+	return newDate;
 }
 
 
@@ -64,14 +64,13 @@ int main() {
 	testdate2->years = 1000;
 
 	struct myDate * unedate = malloc(sizeof(testdate));
-	unedate = additionDate(&testdate, &testdate2);/*
+	unedate = additionDate(testdate, testdate2);
 	printf("%d\n" ,unedate->theMonth);
 	printf("%d\n" ,unedate->theDay);													
 	printf("%d\n" ,unedate->years);
 	
 
-	segmentation fault 
-	*/
+	
 
 
 }
