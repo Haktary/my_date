@@ -9,8 +9,8 @@ typedef struct myDate{
 } myDate;
 
 
-myDate * additionDate(myDate *firstdate, myDate *seconddate); // additionne deux date
-myDate * soustractionDate(myDate *firstdate, myDate *seconddate); // soustraire 2 date
+struct myDate * additionDate(struct myDate *firstdate, struct myDate *seconddate); // additionne deux date
+struct myDate * soustractionDate(struct myDate *firstdate, struct myDate *seconddate); // soustraire 2 date
 char * readFileDate(); // renvoie years, month, day, years, month, day
 myDate * parserCsvDate(char * fileDate); // parse csv rencoie tab de myDate[2]
 void datePrint(); // print myDate
