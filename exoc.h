@@ -1,6 +1,6 @@
 enum month{ Jan, Feb, Mar, Apr, May, Jun, Jul, Aug, Sep, Oct, Nov, Dec }; 
 // on partira du postula que il y'a 360 jour par ans et que les mois ne dure que 30 jours s
-enum day {sunday, monday, tuesday, wednesday, thursday, friday, saturday};
+enum day {monday, tuesday, wednesday, thursday, friday, saturday, sunday};
 typedef struct myDate{
 	int years;
 	enum month theMonth;
