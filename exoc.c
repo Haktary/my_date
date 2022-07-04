@@ -18,11 +18,11 @@ struct myDate * additionDate(struct myDate *firstdate, struct myDate *seconddate
 	} else {
 		newDate->theMonth = newMonth;
 	}
+
 	int newDay = firstdate->theDay + seconddate->theDay;
-	printf("%d\n", newDay);
+	
 	if (newDay > 7) {
 		newDay = newDay - 7;
-		printf("%d\n", newDay);
 		newDate->theDay = newDay;
 
 	} else {
@@ -34,6 +34,8 @@ struct myDate * soustractionDate(struct myDate *firstdate, struct myDate *second
 
 	int newYears = firstdate->years - seconddate->years;
 	int newMonth = firstdate->theMonth - seconddate->theMonth;
+	printf("%d\n" ,newYears);
+	printf("%d\n" ,newMonth);
 	struct myDate *newDate = malloc(sizeof(newDate));
 	if (newMonth < 1 ) {
 		newMonth = newMonth + 12 ;
@@ -49,6 +51,7 @@ struct myDate * soustractionDate(struct myDate *firstdate, struct myDate *second
 	} else {
 		newDate->theDay = newDay;
 	}
+	printf("%d\n" ,newDay);
 	return newDate;
 }
 
@@ -62,15 +65,24 @@ int main() {
 	testdate->theMonth = Dec;
 	testdate->years = 1000;
 	struct myDate *testdate2 = malloc(sizeof(testdate2));
-	testdate2->theDay = sunday;
+	testdate2->theDay = friday;
 	testdate2->theMonth = Dec;
 	testdate2->years = 1000;
 
-	struct myDate * unedate = malloc(sizeof(testdate));
-	unedate = additionDate(testdate, testdate2);
-	printf("%d\n" ,unedate->theMonth);
-	printf("%d\n" ,unedate->theDay);													
-	printf("%d\n" ,unedate->years);
+	struct myDate * testaddition = malloc(sizeof(testdate));
+	testaddition = additionDate(testdate, testdate2);
+	
+/*
+	printf("%d\n" ,testaddition->theMonth);
+	printf("%d\n" ,testaddition->theDay);													
+	printf("%d\n" ,testaddition->years);
+*/
+	struct myDate * testsoustraction = malloc(sizeof(testdate));
+	testsoustraction = soustractionDate(testdate, testdate2);
+
+	printf("%d\n" ,testsoustraction->theMonth);
+	printf("%d\n" ,testsoustraction->theDay);													
+	printf("%d\n" ,testsoustraction->years);
 	
 
 	
